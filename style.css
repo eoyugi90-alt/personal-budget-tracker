@@ -1,21 +1,26 @@
-
-/* Element selector */
+/* GENERAL PAGE STYLING */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    color: #333;
 }
 
-/* Element selector */
+/* HEADER */
 header {
     background-color: #1f4e79;
     color: white;
     padding: 25px;
     text-align: center;
+    border-radius: 8px;
 }
 
-/* ID selector */
+header img {
+    vertical-align: middle;
+}
+
+/* ADD EXPENSE SECTION */
 #add-expense {
     background-color: white;
     padding: 20px;
@@ -23,21 +28,108 @@ header {
     border-radius: 8px;
 }
 
-/* Class selector */
+/* FORM STYLING */
+.add-expense-section > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* INPUT AND DROPDOWN STYLING */
+input:not([type="submit"]),
+select {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* INPUT FOCUS EFFECT */
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #1f4e79;
+    background-color: #f0f8ff;
+}
+
+/* BUTTON STYLING */
+button {
+    background-color: #1f4e79;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #163957;
+}
+
+/* EXPENSE TABLE SECTION */
 .expenses-list {
-    background-color: #e8f5e9;
+    background-color: white;
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
 }
 
-/* Element selector */
-input {
-    display: block;
-    width: 95%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* TABLE STYLING */
+.expenses-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* TABLE HEADINGS AND CELLS */
+.expenses-list th,
+.expenses-list td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* TABLE HEADER */
+.expenses-list thead {
+    background-color: #1f4e79;
+    color: white;
+}
+
+/* ALTERNATING TABLE ROWS */
+.expenses-list tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* TABLE ROW HOVER EFFECT */
+.expenses-list tbody tr:hover {
+    background-color: #d6eaf8;
+}
+
+/* COLLAPSIBLE INSTRUCTIONS */
+.instructions {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1f4e79;
+}
+
+/* BUDGETING VIDEO */
+.budgeting-video {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.budgeting-video iframe {
+    max-width: 100%;
 }
